@@ -19,6 +19,7 @@ export type GroupAggregation = TAggregation<Schema, 'group'>;
 export type Schema = {
   'group': {
     plain: {
+      'created_at': string | null;
       'id': number;
       'name': string | null;
     };
