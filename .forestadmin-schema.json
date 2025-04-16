@@ -6,6 +6,22 @@
         {
           "defaultValue": null,
           "enums": [],
+          "field": "created_at",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
+          "type": "Dateonly",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": [],
           "field": "id",
           "integration": null,
           "inverseOf": null,
@@ -33,6 +49,23 @@
           "isVirtual": false,
           "reference": null,
           "type": "String",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": null,
+          "field": "projects",
+          "integration": null,
+          "inverseOf": "group",
+          "isFilterable": false,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": "project.id",
+          "relationship": "HasMany",
+          "type": ["Number"],
           "validations": []
         },
         {
@@ -71,7 +104,7 @@
           "enums": null,
           "field": "group",
           "integration": null,
-          "inverseOf": null,
+          "inverseOf": "projects",
           "isFilterable": true,
           "isPrimaryKey": false,
           "isReadOnly": false,
@@ -120,7 +153,7 @@
           "enums": null,
           "field": "owner",
           "integration": null,
-          "inverseOf": null,
+          "inverseOf": "projects",
           "isFilterable": true,
           "isPrimaryKey": false,
           "isReadOnly": false,
@@ -197,6 +230,23 @@
         },
         {
           "defaultValue": null,
+          "enums": null,
+          "field": "projects",
+          "integration": null,
+          "inverseOf": "owner",
+          "isFilterable": false,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": "project.id",
+          "relationship": "HasMany",
+          "type": ["Number"],
+          "validations": []
+        },
+        {
+          "defaultValue": null,
           "enums": [],
           "field": "toto",
           "integration": null,
@@ -225,7 +275,7 @@
   ],
   "meta": {
     "liana": "forest-nodejs-agent",
-    "liana_version": "1.57.1",
+    "liana_version": "1.63.1",
     "liana_features": null,
     "stack": {"engine": "nodejs", "engine_version": "22.11.0"}
   }

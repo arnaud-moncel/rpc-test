@@ -32,16 +32,16 @@ agent
         foreignKey: 'owner_id',
       });
   })
-  // .customizeCollection('group', collection => {
-  //   collection.addOneToManyRelation('projects', 'project', {
-  //     originKey: 'group_id',
-  //   });
-  // })
-  // .customizeCollection('user', collection => {
-  //   collection.addOneToManyRelation('projects', 'project', {
-  //     originKey: 'owner_id',
-  //   });
-  // })
+  .customizeCollection('group', collection => {
+    collection.addOneToManyRelation('projects', 'project', {
+      originKey: 'group_id',
+    });
+  })
+  .customizeCollection('user', collection => {
+    collection.addOneToManyRelation('projects', 'project', {
+      originKey: 'owner_id',
+    });
+  })
   .markCollectionsAsRpc('group', 'user');
 
 agent.mountOnStandaloneServer(Number(process.env.APPLICATION_PORT)).start();

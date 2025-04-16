@@ -33,6 +33,7 @@ export type GroupAggregation = TAggregation<Schema, 'group'>;
 export type Schema = {
   'group': {
     plain: {
+      'created_at': string | null;
       'id': number;
       'name': string | null;
     };
@@ -51,12 +52,14 @@ export type Schema = {
       'owner': Schema['user']['plain'] & Schema['user']['nested'];
     };
     flat: {
+      'group:created_at': string | null;
       'group:id': number;
       'group:name': string | null;
       'owner:group_id': number | null;
       'owner:id': number;
       'owner:name': string | null;
       'owner:toto': string | null;
+      'owner:group:created_at': string | null;
       'owner:group:id': number;
       'owner:group:name': string | null;
     };
@@ -72,6 +75,7 @@ export type Schema = {
       'group': Schema['group']['plain'] & Schema['group']['nested'];
     };
     flat: {
+      'group:created_at': string | null;
       'group:id': number;
       'group:name': string | null;
     };

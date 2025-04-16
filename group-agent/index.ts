@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 import { createRpcAgent } from '@forestadmin-experimental/rpc-agent';
 import { createSqlDataSource } from '@forestadmin/datasource-sql';
-import { createRpcDataSource } from '@forestadmin-experimental/datasource-rpc';
 
 import { Schema } from './typings';
 

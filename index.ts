@@ -2,7 +2,7 @@
 import dotenv from 'dotenv';
 
 import { createAgent } from '@forestadmin/agent';
-import { createRpcDataSource, generateRpcRelations } from '@forestadmin-experimental/datasource-rpc';
+import { createRpcDataSource, reconciliateRpc } from '@forestadmin-experimental/datasource-rpc';
 
 import { Schema } from './typings';
 
@@ -23,6 +23,6 @@ agent
   .addDataSource(createRpcDataSource({uri: 'http://localhost:3351', authSecret: 'abasicauthsecretforuseragent'}))
   .addDataSource(createRpcDataSource({uri: 'http://localhost:3352', authSecret: 'abasicauthsecretforprojectagent'}))
   .addDataSource(createRpcDataSource({uri: 'http://localhost:3353', authSecret: 'abasicauthsecretforgroupagent'}))
-  .use(generateRpcRelations);
+  .use(reconciliateRpc);
 
 agent.mountOnStandaloneServer(Number(process.env.APPLICATION_PORT)).start();

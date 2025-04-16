@@ -26,6 +26,7 @@ export type GroupAggregation = TAggregation<Schema, 'group'>;
 export type Schema = {
   'group': {
     plain: {
+      'created_at': string | null;
       'id': number;
       'name': string | null;
     };
@@ -43,6 +44,7 @@ export type Schema = {
       'group': Schema['group']['plain'] & Schema['group']['nested'];
     };
     flat: {
+      'group:created_at': string | null;
       'group:id': number;
       'group:name': string | null;
     };
