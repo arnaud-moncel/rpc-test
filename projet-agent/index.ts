@@ -37,7 +37,7 @@ agent
   )
   .customizeCollection("project", (collection) => {
     collection
-      .addManyToOneRelation("groupbl", "group", {
+      .addManyToOneRelation("group", "group", {
         foreignKey: "group_id",
       })
       .addManyToOneRelation("owner", "user", {

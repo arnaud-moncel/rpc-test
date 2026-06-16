@@ -21,10 +21,10 @@
     lodash.isfunction "^3.0.9"
     lodash.isnil "^4.0.0"
 
-"@forestadmin-experimental/rpc-agent@2.10.0":
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/@forestadmin-experimental/rpc-agent/-/rpc-agent-2.10.0.tgz#22cd6dc113142d5cdea5c7da8fa850dfd205eaee"
-  integrity sha512-XRic3X4/XX0zyorS1SifIPbDSqppiAZQ3MeKM448DgVcnVi+olzEBCn875tTYbtzko4xl5G2619aYsD53HOINA==
+"@forestadmin-experimental/rpc-agent@2.10.1":
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/@forestadmin-experimental/rpc-agent/-/rpc-agent-2.10.1.tgz#cb0bcfbf4b41816c9f0e19352a95a85593e47b84"
+  integrity sha512-wI2EuMRS404l5dpAkD6tz1/cPk110IdTYVZH3cwh4a2RUbNCiPufVTeuWKr/iX7n+XPh4V+yehtzYqUUSRJnDg==
   dependencies:
     "@forestadmin/agent" "^1.78.10"
     "@forestadmin/datasource-customizer" "^1.69.3"

@@ -63,13 +63,13 @@ export type Schema = {
       'owner_id': number | null;
     };
     nested: {
-      'groupbl': Schema['group']['plain'] & Schema['group']['nested'];
+      'group': Schema['group']['plain'] & Schema['group']['nested'];
       'owner': Schema['user']['plain'] & Schema['user']['nested'];
     };
     flat: {
-      'groupbl:created_at': string | null;
-      'groupbl:id': number;
-      'groupbl:name': string | null;
+      'group:created_at': string | null;
+      'group:id': number;
+      'group:name': string | null;
       'owner:adress_id': number | null;
       'owner:group_id': number | null;
       'owner:id': number;
@@ -77,6 +77,9 @@ export type Schema = {
       'owner:SFDepedingOnRPC': string | null;
       'owner:adress:id': number;
       'owner:adress:line 1': string | null;
+      'owner:group:created_at': string | null;
+      'owner:group:id': number;
+      'owner:group:name': string | null;
     };
   };
   'user': {
@@ -89,10 +92,14 @@ export type Schema = {
     };
     nested: {
       'adress': Schema['address']['plain'] & Schema['address']['nested'];
+      'group': Schema['group']['plain'] & Schema['group']['nested'];
     };
     flat: {
       'adress:id': number;
       'adress:line 1': string | null;
+      'group:created_at': string | null;
+      'group:id': number;
+      'group:name': string | null;
     };
   };
 };

@@ -220,6 +220,14 @@
     "RPC user chart"
   ],
   "rpc_relations": {
+    "user": {
+      "group": {
+        "type": "ManyToOne",
+        "foreign_collection": "group",
+        "foreign_key": "group_id",
+        "foreign_key_target": "id"
+      }
+    },
     "group": {
       "users": {
         "type": "OneToMany",
@@ -234,5 +242,5 @@
       "name": "main-user-rpc"
     }
   ],
-  "etag": "d6ba08f8e94d7285f934c1d3f5607c1fc59e5515"
+  "etag": "a7cc21b331a5d4c0a8dd1456e2faa0994f6768d9"
 }

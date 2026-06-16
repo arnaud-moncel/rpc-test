@@ -351,6 +351,14 @@
     "RPC user chart"
   ],
   "rpc_relations": {
+    "project": {
+      "group": {
+        "type": "ManyToOne",
+        "foreign_collection": "group",
+        "foreign_key": "group_id",
+        "foreign_key_target": "id"
+      }
+    },
     "group": {
       "projects": {
         "type": "OneToMany",
@@ -364,6 +372,14 @@
         "origin_key": "group_id",
         "origin_key_target": "id"
       }
+    },
+    "user": {
+      "group": {
+        "type": "ManyToOne",
+        "foreign_collection": "group",
+        "foreign_key": "group_id",
+        "foreign_key_target": "id"
+      }
     }
   },
   "native_query_connections": [
@@ -371,5 +387,5 @@
       "name": "main-user-rpc"
     }
   ],
-  "etag": "d80ea9d1f5a43f9945b87be02995479a8e400991"
+  "etag": "83ee75f572a547eff878b168e5e4524b4c8d41e3"
 }
