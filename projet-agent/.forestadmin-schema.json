@@ -1,0 +1,375 @@
+{
+  "collections": [
+    {
+      "name": "project",
+      "charts": [],
+      "countable": true,
+      "searchable": true,
+      "segments": [],
+      "aggregation_capabilities": {
+        "supported_date_operations": [
+          "Year",
+          "Quarter",
+          "Month",
+          "Week",
+          "Day"
+        ],
+        "support_groups": true
+      },
+      "fields": {
+        "id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": true,
+          "allow_null": false,
+          "is_sortable": true,
+          "is_primary_key": true,
+          "is_groupable": true
+        },
+        "name": {
+          "column_type": "String",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "not_contains",
+            "not_i_contains",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in",
+            "starts_with",
+            "ends_with",
+            "contains",
+            "i_starts_with",
+            "i_ends_with",
+            "i_contains",
+            "like",
+            "i_like"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "owner_id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "group_id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "owner": {
+          "type": "ManyToOne",
+          "foreign_collection": "user",
+          "foreign_key": "owner_id",
+          "foreign_key_target": "id"
+        }
+      },
+      "actions": {}
+    },
+    {
+      "name": "address",
+      "charts": [],
+      "countable": true,
+      "searchable": true,
+      "segments": [],
+      "aggregation_capabilities": {
+        "supported_date_operations": [
+          "Year",
+          "Quarter",
+          "Month",
+          "Week",
+          "Day"
+        ],
+        "support_groups": true
+      },
+      "fields": {
+        "id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": true,
+          "allow_null": false,
+          "is_sortable": true,
+          "is_primary_key": true,
+          "is_groupable": true
+        },
+        "line 1": {
+          "column_type": "String",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "not_contains",
+            "not_i_contains",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in",
+            "starts_with",
+            "ends_with",
+            "contains",
+            "i_starts_with",
+            "i_ends_with",
+            "i_contains",
+            "like",
+            "i_like"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "users": {
+          "foreign_collection": "user",
+          "origin_key": "adress_id",
+          "origin_key_target": "id",
+          "type": "OneToMany"
+        }
+      },
+      "actions": {}
+    },
+    {
+      "name": "user",
+      "charts": [],
+      "countable": true,
+      "searchable": true,
+      "segments": [],
+      "aggregation_capabilities": {
+        "supported_date_operations": [
+          "Year",
+          "Quarter",
+          "Month",
+          "Week",
+          "Day"
+        ],
+        "support_groups": true
+      },
+      "fields": {
+        "id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": true,
+          "allow_null": false,
+          "is_sortable": true,
+          "is_primary_key": true,
+          "is_groupable": true
+        },
+        "name": {
+          "column_type": "String",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "not_contains",
+            "not_i_contains",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in",
+            "starts_with",
+            "ends_with",
+            "contains",
+            "i_starts_with",
+            "i_ends_with",
+            "i_contains",
+            "like",
+            "i_like"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "group_id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "adress_id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "adress": {
+          "foreign_collection": "address",
+          "foreign_key": "adress_id",
+          "foreign_key_target": "id",
+          "type": "ManyToOne"
+        },
+        "SFDepedingOnRPC": {
+          "column_type": "String",
+          "filter_operators": [],
+          "is_primary_key": false,
+          "is_read_only": true,
+          "is_sortable": false,
+          "is_groupable": true,
+          "type": "Column"
+        },
+        "projects": {
+          "type": "OneToMany",
+          "foreign_collection": "project",
+          "origin_key": "owner_id",
+          "origin_key_target": "id"
+        }
+      },
+      "actions": {}
+    }
+  ],
+  "charts": [
+    "RPC user chart"
+  ],
+  "rpc_relations": {
+    "group": {
+      "projects": {
+        "type": "OneToMany",
+        "foreign_collection": "project",
+        "origin_key": "group_id",
+        "origin_key_target": "id"
+      },
+      "users": {
+        "type": "OneToMany",
+        "foreign_collection": "user",
+        "origin_key": "group_id",
+        "origin_key_target": "id"
+      }
+    }
+  },
+  "native_query_connections": [
+    {
+      "name": "main-user-rpc"
+    }
+  ],
+  "etag": "d80ea9d1f5a43f9945b87be02995479a8e400991"
+}

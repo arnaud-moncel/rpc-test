@@ -8,6 +8,13 @@ import {
   TSortClause
 } from '@forestadmin/agent';
 
+export type AddressCustomizer = CollectionCustomizer<Schema, 'address'>;
+export type AddressRecord = TPartialRow<Schema, 'address'>;
+export type AddressConditionTree = TConditionTree<Schema, 'address'>;
+export type AddressFilter = TPaginatedFilter<Schema, 'address'>;
+export type AddressSortClause = TSortClause<Schema, 'address'>;
+export type AddressAggregation = TAggregation<Schema, 'address'>;
+
 export type UserCustomizer = CollectionCustomizer<Schema, 'user'>;
 export type UserRecord = TPartialRow<Schema, 'user'>;
 export type UserConditionTree = TConditionTree<Schema, 'user'>;
@@ -24,6 +31,14 @@ export type GroupAggregation = TAggregation<Schema, 'group'>;
 
 
 export type Schema = {
+  'address': {
+    plain: {
+      'id': number;
+      'line 1': string | null;
+    };
+    nested: {};
+    flat: {};
+  };
   'group': {
     plain: {
       'created_at': string | null;
@@ -35,15 +50,19 @@ export type Schema = {
   };
   'user': {
     plain: {
+      'adress_id': number | null;
       'group_id': number | null;
       'id': number;
       'name': string | null;
-      'toto': string | null;
+      'SFDepedingOnRPC': string | null;
     };
     nested: {
+      'adress': Schema['address']['plain'] & Schema['address']['nested'];
       'group': Schema['group']['plain'] & Schema['group']['nested'];
     };
     flat: {
+      'adress:id': number;
+      'adress:line 1': string | null;
       'group:created_at': string | null;
       'group:id': number;
       'group:name': string | null;

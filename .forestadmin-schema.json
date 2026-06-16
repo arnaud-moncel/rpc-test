@@ -6,6 +6,120 @@
         {
           "defaultValue": null,
           "enums": [],
+          "field": "id",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": true,
+          "isReadOnly": true,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
+          "type": "Number",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": [],
+          "field": "line 1",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
+          "type": "String",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": null,
+          "field": "users",
+          "integration": null,
+          "inverseOf": "adress",
+          "isFilterable": false,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": "user.id",
+          "relationship": "HasMany",
+          "type": ["Number"],
+          "validations": []
+        }
+      ],
+      "icon": null,
+      "integration": null,
+      "isReadOnly": false,
+      "isSearchable": true,
+      "isVirtual": false,
+      "name": "address",
+      "onlyForRelationships": false,
+      "paginationType": "page",
+      "segments": []
+    },
+    {
+      "actions": [
+        {
+          "id": "group-0-download-file",
+          "name": "Download file",
+          "type": "global",
+          "baseUrl": null,
+          "endpoint": "/forest/_actions/group/0/download-file",
+          "httpMethod": "POST",
+          "redirect": null,
+          "download": true,
+          "fields": [],
+          "hooks": {"load": false, "change": ["changeHook"]}
+        },
+        {
+          "id": "group-2-dyn-action",
+          "name": "Dyn action",
+          "type": "global",
+          "baseUrl": null,
+          "endpoint": "/forest/_actions/group/2/dyn-action",
+          "httpMethod": "POST",
+          "redirect": null,
+          "download": false,
+          "fields": [
+            {
+              "field": "Loading...",
+              "label": "Loading...",
+              "type": "String",
+              "isReadOnly": true,
+              "defaultValue": "Form is loading",
+              "description": "",
+              "enums": null,
+              "hook": null,
+              "isRequired": false,
+              "reference": null,
+              "widgetEdit": null
+            }
+          ],
+          "hooks": {"load": true, "change": ["changeHook"]}
+        },
+        {
+          "id": "group-1-simple-action",
+          "name": "Simple action",
+          "type": "global",
+          "baseUrl": null,
+          "endpoint": "/forest/_actions/group/1/simple-action",
+          "httpMethod": "POST",
+          "redirect": null,
+          "download": false,
+          "fields": [{"field": "to", "label": "to", "type": "Boolean"}],
+          "hooks": {"load": false, "change": ["changeHook"]}
+        }
+      ],
+      "fields": [
+        {
+          "defaultValue": null,
+          "enums": [],
           "field": "created_at",
           "integration": null,
           "inverseOf": null,
@@ -56,7 +170,7 @@
           "enums": null,
           "field": "projects",
           "integration": null,
-          "inverseOf": "group",
+          "inverseOf": null,
           "isFilterable": false,
           "isPrimaryKey": false,
           "isReadOnly": false,
@@ -73,7 +187,7 @@
           "enums": null,
           "field": "users",
           "integration": null,
-          "inverseOf": "group",
+          "inverseOf": null,
           "isFilterable": false,
           "isPrimaryKey": false,
           "isReadOnly": false,
@@ -101,18 +215,17 @@
       "fields": [
         {
           "defaultValue": null,
-          "enums": null,
-          "field": "group",
+          "enums": [],
+          "field": "group_id",
           "integration": null,
-          "inverseOf": "projects",
+          "inverseOf": null,
           "isFilterable": true,
           "isPrimaryKey": false,
           "isReadOnly": false,
           "isRequired": false,
           "isSortable": true,
           "isVirtual": false,
-          "reference": "group.id",
-          "relationship": "BelongsTo",
+          "reference": null,
           "type": "Number",
           "validations": []
         },
@@ -181,8 +294,24 @@
       "fields": [
         {
           "defaultValue": null,
+          "enums": [],
+          "field": "SFDepedingOnRPC",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": false,
+          "isPrimaryKey": false,
+          "isReadOnly": true,
+          "isRequired": false,
+          "isSortable": false,
+          "isVirtual": false,
+          "reference": null,
+          "type": "String",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
           "enums": null,
-          "field": "group",
+          "field": "adress",
           "integration": null,
           "inverseOf": "users",
           "isFilterable": true,
@@ -191,8 +320,24 @@
           "isRequired": false,
           "isSortable": true,
           "isVirtual": false,
-          "reference": "group.id",
+          "reference": "address.id",
           "relationship": "BelongsTo",
+          "type": "Number",
+          "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": [],
+          "field": "group_id",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": false,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
           "type": "Number",
           "validations": []
         },
@@ -244,22 +389,6 @@
           "relationship": "HasMany",
           "type": ["Number"],
           "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "toto",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": true,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
         }
       ],
       "icon": null,
@@ -275,8 +404,9 @@
   ],
   "meta": {
     "liana": "forest-nodejs-agent",
-    "liana_version": "1.63.1",
+    "liana_version": "1.79.4",
     "liana_features": null,
-    "stack": {"engine": "nodejs", "engine_version": "22.11.0"}
+    "ai_llms": null,
+    "stack": {"engine": "nodejs", "engine_version": "22.12.0"}
   }
 }

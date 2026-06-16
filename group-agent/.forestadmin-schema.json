@@ -1,0 +1,139 @@
+{
+  "collections": [
+    {
+      "name": "group",
+      "charts": [],
+      "countable": true,
+      "searchable": true,
+      "segments": [],
+      "aggregation_capabilities": {
+        "supported_date_operations": [
+          "Year",
+          "Quarter",
+          "Month",
+          "Week",
+          "Day"
+        ],
+        "support_groups": true
+      },
+      "fields": {
+        "id": {
+          "column_type": "Number",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": true,
+          "allow_null": false,
+          "is_sortable": true,
+          "is_primary_key": true,
+          "is_groupable": true
+        },
+        "name": {
+          "column_type": "String",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "not_contains",
+            "not_i_contains",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in",
+            "starts_with",
+            "ends_with",
+            "contains",
+            "i_starts_with",
+            "i_ends_with",
+            "i_contains",
+            "like",
+            "i_like"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        },
+        "created_at": {
+          "column_type": "Dateonly",
+          "filter_operators": [
+            "equal",
+            "not_equal",
+            "less_than",
+            "greater_than",
+            "less_than_or_equal",
+            "greater_than_or_equal",
+            "today",
+            "yesterday",
+            "previous_month",
+            "previous_quarter",
+            "previous_week",
+            "previous_year",
+            "previous_month_to_date",
+            "previous_quarter_to_date",
+            "previous_week_to_date",
+            "previous_x_days_to_date",
+            "previous_x_days",
+            "previous_year_to_date",
+            "present",
+            "blank",
+            "missing",
+            "in",
+            "not_in",
+            "before",
+            "after",
+            "after_x_hours_ago",
+            "before_x_hours_ago",
+            "future",
+            "past"
+          ],
+          "type": "Column",
+          "validation": [],
+          "is_read_only": false,
+          "allow_null": true,
+          "is_sortable": true,
+          "is_groupable": true
+        }
+      },
+      "actions": {
+        "Download file": {
+          "scope": "Global",
+          "static_form": true,
+          "is_generate_file": true
+        },
+        "Simple action": {
+          "scope": "Global",
+          "static_form": true,
+          "is_generate_file": false
+        },
+        "Dyn action": {
+          "scope": "Global",
+          "static_form": false,
+          "is_generate_file": false
+        }
+      }
+    }
+  ],
+  "charts": [],
+  "rpc_relations": {},
+  "native_query_connections": [],
+  "etag": "2b885c1e09340524c8de17e7397471d52a2d0941"
+}
